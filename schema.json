@@ -1,0 +1,74 @@
+{
+  "type": "automation",
+  "metadata": {},
+  "schema": {
+    "name": "csv-export",
+    "tagline": "CSV Export Automation Step",
+    "icon": "Export",
+    "description": "CSV Export",
+    "type": "action",
+    "stepId": "10fc96d1-6336-44d9-be1b-0af35d24e194",
+    "schema": {
+      "inputs": {
+        "properties": {
+          "tableId": {
+            "type": "string",
+            "customType": "table",
+            "title": "Table"
+          },
+          "query": {
+            "type": "object",
+            "customType": "filters",
+            "title": "Filters"
+          },
+          "region": {
+            "type": "string",
+            "title": "Region"
+          },
+          "endpoint": {
+            "type": "string",
+            "title": "Endpoint"
+          },
+          "bucket": {
+            "type": "string",
+            "title": "Bucket"
+          },
+          "accessKey": {
+            "type": "string",
+            "title": "Access Key"
+          },
+          "secret": {
+            "type": "string",
+            "title": "Access Key Secret"
+          },
+          "budibaseApiUrl": {
+            "type": "string",
+            "title": "Budibase API URL"
+          },
+          "budibaseApiKey": {
+            "type": "string",
+            "title": "Budibase API Key"
+          }
+        },
+        "required": ["table", "query", "region", "bucket", "accessKey", "secret", "budibaseApiUrl", "budibaseApiKey"]
+      },
+      "outputs": {
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "description": "Whether the action was successful"
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "key": {
+            "type": "string",
+            "description": "Key for the generated file"
+          }
+        },
+        "required": ["success"]
+      }
+    }
+  }
+}
